@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:selecao_app/src/application/services/app_service.dart';
+import 'package:selecao_app/src/common_widgets/custom_snackbar.dart';
 import 'package:selecao_app/src/constants/app_theme.dart';
 import 'package:selecao_app/src/presentation/address_search/address_search_screen.dart';
 import 'package:selecao_app/src/presentation/home/home_screen.dart';
@@ -68,7 +69,16 @@ class DrawerLayout extends StatelessWidget {
                       "A1",
                       style: AppTheme.listItemText,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      context.pop();
+                      ScaffoldMessenger.of(context).clearSnackBars();
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        CustomSnackbar.buildErrorSnackBar(
+                          errorString: "Tela não implementada.",
+                          errorDuration: 5,
+                        ),
+                      );
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.access_time),
@@ -76,7 +86,16 @@ class DrawerLayout extends StatelessWidget {
                       "A2",
                       style: AppTheme.listItemText,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      context.pop();
+                      ScaffoldMessenger.of(context).clearSnackBars();
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        CustomSnackbar.buildErrorSnackBar(
+                          errorString: "Tela não implementada.",
+                          errorDuration: 5,
+                        ),
+                      );
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.featured_play_list_sharp),
@@ -84,7 +103,16 @@ class DrawerLayout extends StatelessWidget {
                       "A3",
                       style: AppTheme.listItemText,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      context.pop();
+                      ScaffoldMessenger.of(context).clearSnackBars();
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        CustomSnackbar.buildErrorSnackBar(
+                          errorString: "Tela não implementada.",
+                          errorDuration: 5,
+                        ),
+                      );
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.signal_cellular_alt),
@@ -92,7 +120,16 @@ class DrawerLayout extends StatelessWidget {
                       "A4",
                       style: AppTheme.listItemText,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      context.pop();
+                      ScaffoldMessenger.of(context).clearSnackBars();
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        CustomSnackbar.buildErrorSnackBar(
+                          errorString: "Tela não implementada.",
+                          errorDuration: 5,
+                        ),
+                      );
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.pie_chart),
@@ -100,7 +137,16 @@ class DrawerLayout extends StatelessWidget {
                       "A5",
                       style: AppTheme.listItemText,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      context.pop();
+                      ScaffoldMessenger.of(context).clearSnackBars();
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        CustomSnackbar.buildErrorSnackBar(
+                          errorString: "Tela não implementada.",
+                          errorDuration: 5,
+                        ),
+                      );
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.scatter_plot_outlined),
@@ -108,7 +154,16 @@ class DrawerLayout extends StatelessWidget {
                       "A6",
                       style: AppTheme.listItemText,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      context.pop();
+                      ScaffoldMessenger.of(context).clearSnackBars();
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        CustomSnackbar.buildErrorSnackBar(
+                          errorString: "Tela não implementada.",
+                          errorDuration: 5,
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),
