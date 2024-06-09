@@ -13,16 +13,21 @@ InputDecoration inputForm({
   String? helperText,
 }) {
   return InputDecoration(
-    fillColor: const Color(0xFFCCD6E0).withOpacity(0.2),
-    filled: true,
+    fillColor: AppTheme.appLightBackground,
+    filled: false,
+    contentPadding:
+        const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
     disabledBorder: const OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.white, width: 1),
+      borderSide: BorderSide(color: AppTheme.disabledText, width: 1),
+      borderRadius: BorderRadius.all(Radius.circular(16)),
     ),
     enabledBorder: const OutlineInputBorder(
-      borderSide: BorderSide(color: Color(0xFFE4E4E4), width: 1),
+      borderSide: BorderSide(color: AppTheme.textPrimaryColor, width: 1),
+      borderRadius: BorderRadius.all(Radius.circular(16)),
     ),
     focusedBorder: const OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.grey, width: 1),
+      borderSide: BorderSide(color: Color(0xFF242424), width: 1),
+      borderRadius: BorderRadius.all(Radius.circular(16)),
     ),
     helperText: helperText,
     hintText: hintText,
