@@ -29,23 +29,45 @@ class DrawerLayout extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        const Padding(
+                          padding: EdgeInsets.symmetric(vertical: 16.0),
+                          child: Center(
+                            child: CircleAvatar(
+                              backgroundColor: AppTheme.itemSecondaryBackground,
+                              radius: 42,
+                              child: Icon(
+                                Icons.person,
+                                size: 32,
+                                color: AppTheme.textPrimaryColor,
+                              ),
+                            ),
+                          ),
+                        ),
                         Text(
                           "Nome: ${AppService.instance.currentUser?.name ?? "não disponível."}",
+                          style: AppTheme.listItemText,
                         ),
+                        const SizedBox(height: 10),
                         if (AppService.instance.currentUser != null &&
                             AppService.instance.currentUser?.email != null)
                           Text(
                             "E-mail: ${AppService.instance.currentUser!.email.isEmpty ? "não disponível." : AppService.instance.currentUser!.email}",
+                            style: AppTheme.listItemText,
                           ),
                       ],
                     ),
                   ),
-                  const SizedBox(
-                    height: 30,
+                  
+                  const Padding(
+                    padding: EdgeInsets.only(top: 15.0),
+                    child: Divider(
+                      thickness: 0.5,
+                      color: AppTheme.textPrimaryColor,
+                    ),
                   ),
                   ListTile(
                     leading: const Icon(Icons.home),
