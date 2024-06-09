@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 
 class LoadingSpinnerWidget extends StatelessWidget {
-  const LoadingSpinnerWidget({super.key});
+  const LoadingSpinnerWidget({super.key, vertical});
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(vertical: 8.0),
-      child: Center(
-        child: CircularProgressIndicator(
-          strokeWidth: 2,
-        ),
+    return const Center(
+      child: CircularProgressIndicator(
+        strokeWidth: 2,
+        color: Colors.white,
       ),
     );
   }
