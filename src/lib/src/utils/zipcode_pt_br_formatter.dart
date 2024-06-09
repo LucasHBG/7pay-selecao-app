@@ -7,23 +7,21 @@ class ZipcodePtBrFormatter extends TextInputFormatter {
     // verifica o tamanho máximo do campo
     if (newValue.text.length > 8) return oldValue;
 
-    final valorFinal = StringBuffer();
-    int posicaoCursor = newValue.selection.end;
+    String newText = newValue.text;
 
-    for (int i = 0; i < newValue.text.length; i++) {
-      if (i == 2) {
-        valorFinal.write('.');
-        if (posicaoCursor > i) posicaoCursor++;
-      }
-      if (i == 5) {
-        valorFinal.write('-');
-        if (posicaoCursor > i) posicaoCursor++;
-      }
-      valorFinal.write(newValue.text[i]);
+    if (newText.length > 2 && !newText.contains(".")) {
+      newText = "${newText.substring(0, 2)}.${newText.substring(2)}";
+    }
+
+    if (newText.length > 6 && !newText.contains("-")) {
+      newText = "${newText.substring(0, 6)}-${newText.substring(6)}";
     }
 
     return newValue.copyWith(
-        text: valorFinal.toString(),
-        selection: TextSelection.collapsed(offset: newValue.text.length));
+        text: newText,
+        selection: newValue.selection.copyWith(
+          baseOffset: newText.length,
+          extentOffset: newText.length,
+        ));
   }
 }
