@@ -6,15 +6,16 @@ class AppTheme {
   static const Color lightText = Color(0xFF4A6572);
   static const Color disabledText = Color(0xFF767676);
 
-  static const Color appBackground = Color(0xFFFFFFFF);
-  static const Color titleTextColor = Color(0xFF3C3E41);
-  static const Color primaryTextColor = Color(0xFF627282);
-  static const Color darkTextColor = Color(0xFF3C3E41);
-  static const Color chipWhiteColor = Color(0xFFFBFBFC);
+  static const Color itemPrimaryBackground = Color(0xFFC67C4E);
+  static const Color itemSecondaryBackground =
+      Color.fromRGBO(237, 237, 237, 35);
+  static const Color appLightBackground = Color(0xFFF9F9F9);
+  static const Color textPrimaryColor = Color(0xFF313131);
+  static const Color textSubtitlePrimaryColor = Color(0xFFA2A2A2);
 
   static Color inputBackgroundColor = const Color(0xFFCCD6E0).withOpacity(0.2);
 
-  static const String fontFamilyName = 'OpenSans';
+  static const String fontFamilyName = 'Sora';
 
   static const TextTheme textTheme = TextTheme(
     displayLarge: h1,
@@ -31,7 +32,7 @@ class AppTheme {
     fontSize: 36,
     letterSpacing: 0.4,
     height: 0.9,
-    color: primaryTextColor,
+    color: textSubtitlePrimaryColor,
   );
 
   static const TextStyle inputLabel = TextStyle(
@@ -39,20 +40,20 @@ class AppTheme {
     fontWeight: FontWeight.w400,
     fontSize: 16,
     letterSpacing: 0,
-    color: primaryTextColor,
+    color: textSubtitlePrimaryColor,
   );
 
   static const TextStyle listItemText = TextStyle(
     fontFamily: fontFamilyName,
     fontWeight: FontWeight.w400,
-    fontSize: 16,
+    fontSize: 14,
     letterSpacing: 0,
-    color: darkTextColor,
+    color: textPrimaryColor,
   );
 
   static const TextStyle buttonLabel = TextStyle(
     fontFamily: fontFamilyName,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.w600,
     fontSize: 16,
     letterSpacing: 0,
     color: Color(0xFFF7F9FA),
@@ -60,10 +61,10 @@ class AppTheme {
 
   static const TextStyle title = TextStyle(
     fontFamily: fontFamilyName,
-    fontWeight: FontWeight.w800,
-    fontSize: 30,
+    fontWeight: FontWeight.w600,
+    fontSize: 16,
     letterSpacing: 0,
-    color: titleTextColor,
+    color: textPrimaryColor,
   );
 
   static const TextStyle subtitle = TextStyle(
@@ -71,7 +72,7 @@ class AppTheme {
     fontWeight: FontWeight.w400,
     fontSize: 20,
     letterSpacing: 0,
-    color: darkTextColor,
+    color: textPrimaryColor,
   );
 
   static const TextStyle headerWhiteTitle = TextStyle(
@@ -85,9 +86,9 @@ class AppTheme {
   static const TextStyle headerBlackTitle = TextStyle(
     fontFamily: fontFamilyName,
     fontWeight: FontWeight.w700,
-    fontSize: 25.0,
+    fontSize: 32.0,
     letterSpacing: 0,
-    color: titleTextColor,
+    color: textPrimaryColor,
   );
 
   static const TextStyle body2 = TextStyle(
@@ -95,7 +96,7 @@ class AppTheme {
     fontWeight: FontWeight.w400,
     fontSize: 19,
     letterSpacing: 0,
-    color: primaryTextColor,
+    color: textSubtitlePrimaryColor,
   );
 
   static const TextStyle caption = TextStyle(
@@ -103,7 +104,7 @@ class AppTheme {
     fontWeight: FontWeight.w500,
     fontSize: 9,
     letterSpacing: 0,
-    color: primaryTextColor,
+    color: textSubtitlePrimaryColor,
   );
 
   static const TextStyle chipBlackText = TextStyle(
@@ -111,7 +112,7 @@ class AppTheme {
     fontWeight: FontWeight.w700,
     fontSize: 13,
     letterSpacing: 0,
-    color: primaryTextColor,
+    color: textSubtitlePrimaryColor,
   );
 
   static const TextStyle chipWhiteText = TextStyle(
@@ -119,6 +120,6 @@ class AppTheme {
     fontWeight: FontWeight.w700,
     fontSize: 13,
     letterSpacing: 0,
-    color: chipWhiteColor,
+    color: Colors.white,
   );
 }
