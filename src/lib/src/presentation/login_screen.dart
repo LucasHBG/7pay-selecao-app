@@ -35,47 +35,66 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        padding: const EdgeInsets.all(16),
-        children: [
-          const Text(
-            'Login to your account',
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.all(16),
+          children: [
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 32.0),
+              child: Center(
+                child: Text(
+                  '7Pay',
+                  style: AppTheme.headerBlackTitle,
+                ),
+              ),
             ),
-          ),
-          const SizedBox(height: 32),
-          _emailInput(),
-          const SizedBox(height: 16),
-          _passwordInput(),
-          const SizedBox(height: 20),
-          ElevatedButton(
-            onPressed: () {
-              setState(() {
-                _isLoading = true;
-              });
+            const SizedBox(height: 32),
+            _emailInput(),
+            const SizedBox(height: 20),
+            _passwordInput(),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              style: ButtonStyle(
+                fixedSize: WidgetStateProperty.all(const Size(60, 60)),
+                textStyle: WidgetStateProperty.all(AppTheme.buttonLabel),
+              ),
+              onPressed: () {
+                setState(() {
+                  _isLoading = true;
+                });
 
-              // Create fake loading time
-              Future.delayed(const Duration(seconds: 2), () {
-                // Set user data with default name to simplify the project
-                AppService.instance.setUserData(UserModel(
-                  uuid: DateTime.now().millisecondsSinceEpoch.toString(),
-                  name: "Lucas H",
-                  email: _emailController.text,
-                  password: _passwordController.text,
-                ));
-                context.go(HomeScreen.route);
-              });
-            },
-            child: Row(
-              children: [
-                const Text('Login'),
-                if (_isLoading) const LoadingSpinnerWidget()
-              ],
-            ),
-          )
-        ],
+                // Create fake loading time
+                Future.delayed(const Duration(seconds: 2), () {
+                  // Set user data with default name to simplify the project
+                  AppService.instance.setUserData(UserModel(
+                    uuid: DateTime.now().millisecondsSinceEpoch.toString(),
+                    name: "Lucas H",
+                    email: _emailController.text,
+                    password: _passwordController.text,
+                  ));
+                  context.go(HomeScreen.route);
+                });
+              },
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    'Login',
+                    style: AppTheme.buttonLabel,
+                  ),
+                  if (_isLoading) const SizedBox(width: 15),
+                  if (_isLoading)
+                    const SizedBox(
+                      height: 15,
+                      width: 15,
+                      child: LoadingSpinnerWidget(),
+                    )
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -116,20 +135,8 @@ class _LoginScreenState extends State<LoginScreen> {
           ? 'O campo não pode estar vazio'
           : null,
       obscureText: _showPassword ? false : true,
-      decoration: InputDecoration(
-        fillColor: const Color.fromARGB(255, 248, 248, 248),
-        filled: true,
-        disabledBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey, width: 0.5),
-        ),
-        enabledBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey, width: 0.5),
-        ),
-        focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.black, width: 1),
-        ),
+      decoration: inputForm(
         hintText: "******",
-        hintStyle: AppTheme.inputLabel,
         suffixIcon: IconButton(
           icon: Icon(
             _showPassword
