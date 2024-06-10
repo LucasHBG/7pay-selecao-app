@@ -37,12 +37,12 @@ class DrawerLayout extends StatelessWidget {
                           padding: EdgeInsets.symmetric(vertical: 16.0),
                           child: Center(
                             child: CircleAvatar(
-                              backgroundColor: AppTheme.itemSecondaryBackground,
+                              backgroundColor: AppTheme.itemPrimaryBackground,
                               radius: 42,
                               child: Icon(
                                 Icons.person,
                                 size: 32,
-                                color: AppTheme.textPrimaryColor,
+                                color: AppTheme.appLightBackground,
                               ),
                             ),
                           ),
@@ -61,7 +61,6 @@ class DrawerLayout extends StatelessWidget {
                       ],
                     ),
                   ),
-                  
                   const Padding(
                     padding: EdgeInsets.only(top: 15.0),
                     child: Divider(
@@ -70,7 +69,10 @@ class DrawerLayout extends StatelessWidget {
                     ),
                   ),
                   ListTile(
-                    leading: const Icon(Icons.home),
+                    leading: const Icon(
+                      Icons.home,
+                      color: AppTheme.itemPrimaryBackground,
+                    ),
                     title: const Text(
                       "Início",
                       style: AppTheme.listItemText,
@@ -78,7 +80,10 @@ class DrawerLayout extends StatelessWidget {
                     onTap: () => context.go(HomeScreen.route),
                   ),
                   ListTile(
-                    leading: const Icon(Icons.credit_card),
+                    leading: const Icon(
+                      Icons.credit_card,
+                      color: AppTheme.itemPrimaryBackground,
+                    ),
                     title: const Text(
                       "Endereços",
                       style: AppTheme.listItemText,
@@ -86,7 +91,10 @@ class DrawerLayout extends StatelessWidget {
                     onTap: () => context.go(AddressSearchScreen.route),
                   ),
                   ListTile(
-                    leading: const Icon(Icons.monetization_on_outlined),
+                    leading: const Icon(
+                      Icons.monetization_on_outlined,
+                      color: AppTheme.itemPrimaryBackground,
+                    ),
                     title: const Text(
                       "Finanças",
                       style: AppTheme.listItemText,
@@ -103,7 +111,10 @@ class DrawerLayout extends StatelessWidget {
                     },
                   ),
                   ListTile(
-                    leading: const Icon(Icons.access_time),
+                    leading: const Icon(
+                      Icons.access_time,
+                      color: AppTheme.itemPrimaryBackground,
+                    ),
                     title: const Text(
                       "Link de pagamento",
                       style: AppTheme.listItemText,
@@ -120,7 +131,10 @@ class DrawerLayout extends StatelessWidget {
                     },
                   ),
                   ListTile(
-                    leading: const Icon(Icons.featured_play_list_sharp),
+                    leading: const Icon(
+                      Icons.featured_play_list_sharp,
+                      color: AppTheme.itemPrimaryBackground,
+                    ),
                     title: const Text(
                       "Emitissão NF-E",
                       style: AppTheme.listItemText,
@@ -137,7 +151,10 @@ class DrawerLayout extends StatelessWidget {
                     },
                   ),
                   ListTile(
-                    leading: const Icon(Icons.signal_cellular_alt),
+                    leading: const Icon(
+                      Icons.signal_cellular_alt,
+                      color: AppTheme.itemPrimaryBackground,
+                    ),
                     title: const Text(
                       "Rendimentos",
                       style: AppTheme.listItemText,
@@ -154,7 +171,10 @@ class DrawerLayout extends StatelessWidget {
                     },
                   ),
                   ListTile(
-                    leading: const Icon(Icons.pie_chart),
+                    leading: const Icon(
+                      Icons.pie_chart,
+                      color: AppTheme.itemPrimaryBackground,
+                    ),
                     title: const Text(
                       "Gastos",
                       style: AppTheme.listItemText,
@@ -171,7 +191,10 @@ class DrawerLayout extends StatelessWidget {
                     },
                   ),
                   ListTile(
-                    leading: const Icon(Icons.scatter_plot_outlined),
+                    leading: const Icon(
+                      Icons.scatter_plot_outlined,
+                      color: AppTheme.itemPrimaryBackground,
+                    ),
                     title: const Text(
                       "Aplicações",
                       style: AppTheme.listItemText,
