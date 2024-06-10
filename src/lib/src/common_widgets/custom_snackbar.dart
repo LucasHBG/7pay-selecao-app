@@ -15,8 +15,8 @@ class CustomSnackbar {
         clipBehavior: Clip.none,
         children: [
           Container(
-            padding: const EdgeInsets.all(16),
-            height: 95,
+            padding: const EdgeInsets.all(12),
+            height: 90,
             decoration: const BoxDecoration(
               color: Color(0xFFC72C41),
               borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -30,7 +30,7 @@ class CustomSnackbar {
                     children: [
                       const Text(
                         "Oops!",
-                        style: TextStyle(fontSize: 18, color: Colors.white),
+                        style: TextStyle(fontSize: 16, color: Colors.white),
                       ),
                       const SizedBox(height: 5),
                       Text(
