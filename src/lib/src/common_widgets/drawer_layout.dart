@@ -88,7 +88,7 @@ class DrawerLayout extends StatelessWidget {
                   ListTile(
                     leading: const Icon(Icons.monetization_on_outlined),
                     title: const Text(
-                      "A1",
+                      "Finanças",
                       style: AppTheme.listItemText,
                     ),
                     onTap: () {
@@ -105,7 +105,7 @@ class DrawerLayout extends StatelessWidget {
                   ListTile(
                     leading: const Icon(Icons.access_time),
                     title: const Text(
-                      "A2",
+                      "Link de pagamento",
                       style: AppTheme.listItemText,
                     ),
                     onTap: () {
@@ -122,7 +122,7 @@ class DrawerLayout extends StatelessWidget {
                   ListTile(
                     leading: const Icon(Icons.featured_play_list_sharp),
                     title: const Text(
-                      "A3",
+                      "Emitissão NF-E",
                       style: AppTheme.listItemText,
                     ),
                     onTap: () {
@@ -139,7 +139,7 @@ class DrawerLayout extends StatelessWidget {
                   ListTile(
                     leading: const Icon(Icons.signal_cellular_alt),
                     title: const Text(
-                      "A4",
+                      "Rendimentos",
                       style: AppTheme.listItemText,
                     ),
                     onTap: () {
@@ -156,7 +156,7 @@ class DrawerLayout extends StatelessWidget {
                   ListTile(
                     leading: const Icon(Icons.pie_chart),
                     title: const Text(
-                      "A5",
+                      "Gastos",
                       style: AppTheme.listItemText,
                     ),
                     onTap: () {
@@ -173,7 +173,7 @@ class DrawerLayout extends StatelessWidget {
                   ListTile(
                     leading: const Icon(Icons.scatter_plot_outlined),
                     title: const Text(
-                      "A6",
+                      "Aplicações",
                       style: AppTheme.listItemText,
                     ),
                     onTap: () {
