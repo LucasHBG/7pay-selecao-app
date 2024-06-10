@@ -10,7 +10,7 @@ import 'package:selecao_app/src/common_widgets/custom_snackbar.dart';
 import 'package:selecao_app/src/common_widgets/drawer_layout.dart';
 import 'package:selecao_app/src/common_widgets/form_input_decorator.dart';
 import 'package:selecao_app/src/constants/app_theme.dart';
-import 'package:selecao_app/src/domain/viacep_data_store.dart';
+import 'package:selecao_app/src/domain/store/viacep_data_store.dart';
 import 'package:selecao_app/src/presentation/address_search/address_card_widget.dart';
 import 'package:selecao_app/src/presentation/login/login_screen.dart';
 import 'package:selecao_app/src/utils/zipcode_pt_br_formatter.dart';
@@ -177,6 +177,17 @@ class _AddressSearchScreenState extends State<AddressSearchScreen> {
                       flex: 2,
                       child: ElevatedButton(
                         onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          shape: const RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(16))),
+                          padding: const EdgeInsets.all(16),
+                          backgroundColor: AppTheme.itemPrimaryBackground,
+                          side: const BorderSide(
+                            width: 1,
+                            color: Colors.transparent,
+                          ),
+                        ),
                         child: const Text(
                           "Filtrar",
                           style: AppTheme.buttonLabel,
