@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:selecao_app/src/constants/app_keys.dart';
 import 'package:selecao_app/src/domain/user_model.dart';
-import 'package:selecao_app/src/presentation/login_screen.dart';
+import 'package:selecao_app/src/presentation/login/login_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // Service to manage authentication
