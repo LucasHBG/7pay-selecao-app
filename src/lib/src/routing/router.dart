@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:selecao_app/src/presentation/address_search/address_search_screen.dart';
 import 'package:selecao_app/src/presentation/home/home_screen.dart';
-import 'package:selecao_app/src/presentation/login_screen.dart';
+import 'package:selecao_app/src/presentation/login/login_screen.dart';
 import 'package:selecao_app/src/application/services/app_service.dart';
 
 part 'redirection.dart';
