@@ -46,6 +46,14 @@ class AppTheme {
   static const TextStyle listItemText = TextStyle(
     fontFamily: fontFamilyName,
     fontWeight: FontWeight.w400,
+    fontSize: 16,
+    letterSpacing: 0,
+    color: textPrimaryColor,
+  );
+
+  static const TextStyle listItemSubtitleText = TextStyle(
+    fontFamily: fontFamilyName,
+    fontWeight: FontWeight.w400,
     fontSize: 14,
     letterSpacing: 0,
     color: textPrimaryColor,
