@@ -9,12 +9,8 @@ class ZipcodePtBrFormatter extends TextInputFormatter {
 
     String newText = newValue.text;
 
-    if (newText.length > 2 && !newText.contains(".")) {
-      newText = "${newText.substring(0, 2)}.${newText.substring(2)}";
-    }
-
-    if (newText.length > 6 && !newText.contains("-")) {
-      newText = "${newText.substring(0, 6)}-${newText.substring(6)}";
+    if (newText.length > 5 && !newText.contains("-")) {
+      newText = "${newText.substring(0, 5)}-${newText.substring(5)}";
     }
 
     return newValue.copyWith(
