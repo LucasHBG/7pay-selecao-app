@@ -4,7 +4,7 @@ import 'package:selecao_app/src/application/services/app_service.dart';
 import 'package:selecao_app/src/common_widgets/drawer_layout.dart';
 import 'package:selecao_app/src/constants/app_theme.dart';
 
-import '../login_screen.dart';
+import '../login/login_screen.dart';
 
 class HomeScreenMobile extends StatelessWidget {
   const HomeScreenMobile({super.key});
@@ -13,6 +13,7 @@ class HomeScreenMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text(
           '7Pay',
           style: AppTheme.title,
@@ -29,9 +30,8 @@ class HomeScreenMobile extends StatelessWidget {
         ],
       ),
       drawer: const DrawerLayout(),
-      body: Center(
-        child: Text(
-            'Tela MOBILE do usuário: ${AppService.instance.currentUser?.name}'),
+      body: const Center(
+        child: Text('Tela MOBILE'),
       ),
     );
   }
