@@ -12,6 +12,7 @@ final router = GoRouter(
   debugLogDiagnostics: true,
   refreshListenable: AppService.instance,
   navigatorKey: AppService.instance.navigatorKey,
+  initialLocation: "/",
   routes: <GoRoute>[
     GoRoute(
       path: "/",
