@@ -38,7 +38,7 @@ class CustomSnackbar {
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style:
-                            const TextStyle(fontSize: 11, color: Colors.white),
+                            const TextStyle(fontSize: 12, color: Colors.white),
                       ),
                     ],
                   ),
