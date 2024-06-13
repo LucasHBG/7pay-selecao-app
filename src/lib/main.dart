@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
@@ -11,20 +12,27 @@ final scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await SystemChrome.setPreferredOrientations(<DeviceOrientation>[
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]).then(
-    (_) => runApp(
-      NotificationListener<OverscrollIndicatorNotification>(
-        onNotification: (overscroll) {
-          overscroll.disallowIndicator();
-          return true;
-        },
-        child: const MyApp(),
+  // Using kIsWeb constant to prevent runtime errors
+  if (!kIsWeb && defaultTargetPlatform == TargetPlatform.iOS ||
+      defaultTargetPlatform == TargetPlatform.android) {
+    await SystemChrome.setPreferredOrientations(<DeviceOrientation>[
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]).then(
+      (_) => runApp(
+        NotificationListener<OverscrollIndicatorNotification>(
+          onNotification: (overscroll) {
+            overscroll.disallowIndicator();
+            return true;
+          },
+          child: const MyApp(),
+        ),
       ),
-    ),
-  );
+    );
+  }
+
+  // If not an app for iOS or Android then run default layout
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -39,7 +47,6 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     //Uses the browser URL's pathname to represent Flutter's route name.
-    // usePathUrlStrategy();
     usePathUrlStrategy();
     AppService.instance.initialize();
   }
